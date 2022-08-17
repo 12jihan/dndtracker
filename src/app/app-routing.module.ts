@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     pathMatch: 'full',
     loadChildren: () => import('./features/mainpage/mainpage.module').then(m => m.MainpageModule)
-  },
+  }
 ];
 
 @NgModule({
@@ -14,8 +14,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
-
-// function lazyLoadModules(module: NgModule) { 
-//   return import('./components/mainpage/mainpage.module').then(m => m.MainpageModule)
-// }
