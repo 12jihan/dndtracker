@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MainpageComponent } from './mainpage.component';
 
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    loadChildren: () => import('./features/mainpage/mainpage.module').then(m => m.MainpageModule)
+    component: MainpageComponent
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class MainpageRoutingModule { }
 
 
 // function lazyLoadModules(module: NgModule) { 
