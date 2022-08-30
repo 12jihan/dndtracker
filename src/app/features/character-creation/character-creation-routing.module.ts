@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainpageComponent } from './mainpage.component';
+import { CharacterCreationComponent } from './character-creation.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MainpageComponent
-  },
+    component: CharacterCreationComponent
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class MainpageRoutingModule { }
+export class CharacterCreationRoutingModule { }
